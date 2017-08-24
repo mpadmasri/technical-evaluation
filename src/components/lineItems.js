@@ -5,14 +5,14 @@ export default class LineItems extends React.Component {
 		super(props);
 		this.props = props;
 		this.state = {
-			amountFromLineItem: 0
+			amountFromLineItem: 0.0
 		}
 	}
 	render() {
 		return (
 			<div>
-				<input type="text" name="desc" />
-				<input type="text" name="amount"  onChange={this.onChange.bind(this)}/>
+				<input type="text" name="desc" className="descStyle"/>
+				<input type="text" name="amount" className="descStyle" onChange={this.onChange.bind(this)}/>
 			</div>
 			);
 	}

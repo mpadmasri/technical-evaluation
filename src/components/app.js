@@ -8,8 +8,8 @@ export default class App extends React.Component {
 		super(props);
 		this.state = {
 			lineItems: 1,
-			amountTotal: 0,
-			lineItemsArray: [{id: 0, amount: 0}]
+			amountTotal: 0.0,
+			lineItemsArray: [{id: 0, amount: 0.0}]
 		};
 	}
 	render() {
@@ -20,7 +20,7 @@ export default class App extends React.Component {
 		return (
 			<div>
 				<div>
-						<h1>Evaluation Exercise</h1>
+						<h2>Evaluation Exercise</h2>
 				</div>
 				<div className = "mainDiv">
 					<div className = "elementsStyle">
@@ -30,11 +30,11 @@ export default class App extends React.Component {
 						{lineItemsUI}
 					</div>
 					<div>
-							<img src="/src/assets/Add.png" width="42" height="42" onClick={this.addLineItem.bind(this)} />
+							<img src="/src/assets/Add.png" className="imgStyle" onClick={this.addLineItem.bind(this)} />
 
 					</div>
 					<div>
-							<label>
+							<label className="readStyle">
 								Total
 								${this.state.amountTotal}
 							</label>
@@ -65,7 +65,7 @@ export default class App extends React.Component {
                 }
                 amountObj.amount = amt;
             }
-            totalAmount += parseInt(amountObj.amount);
+            totalAmount += parseFloat(amountObj.amount);
         });
         this.setState({
                 amountTotal: totalAmount,
