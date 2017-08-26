@@ -96,8 +96,6 @@ class App extends React.Component {
         methods.forEach(method => this[method] = this[method].bind(this));
     }
 
-		ref(){el => this.name = el}
-
 		/**
 		*  @param {id, description, amount} - When ever there is a change/update to the
 		*		line items below listener method would be called to recaluclate the amount and display the updated total on the UI.
