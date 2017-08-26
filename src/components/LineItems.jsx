@@ -38,9 +38,7 @@ class LineItems extends React.Component {
 					this.setState({
 							amountFromLineItem: amt
 					});
-					if(this.props.lineItemChangeListener) {
-							this.props.lineItemChangeListener(this.props.id, desc, amt);
-					}
+					this.props.changeListener(this.props.id, desc, amt);
 			}
 
 			/**
@@ -53,9 +51,7 @@ class LineItems extends React.Component {
 					this.setState({
 							description: desc
 					});
-					if(this.props.lineItemChangeListener) {
-							this.props.lineItemChangeListener(this.props.id, desc, amt);
-					}
+					this.props.changeListener(this.props.id, desc, amt);
 				}
 				/**
 			  *  @returns {Component} LineItems

@@ -9,13 +9,9 @@ module.exports = {
         './src'
     ],
     output: {
-        path: path.join(__dirname, 'public'),
+        path: path.join(__dirname, 'dist'),
         filename: 'bundle.js'
     },
-    /*resolve: {
-        modulesDirectories: ['node_modules', 'src'],
-        extensions: ['', '.js']
-    },*/
     module: {
         loaders: [
         {
@@ -23,8 +19,8 @@ module.exports = {
             exclude: /node_modules/,
             loaders: ['react-hot-loader', 'babel-loader?presets[]=react,presets[]=es2015']
         },
-        { 
-            test: /\.css$/, loader: "style-loader!css-loader" 
+        {
+            test: /\.css$/, loader: "style-loader!css-loader"
         }
         ]
     },

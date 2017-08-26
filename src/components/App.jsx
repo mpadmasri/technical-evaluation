@@ -22,12 +22,20 @@ class App extends React.Component {
 						email: "",
 						date: "",
 					};
-					this._bind("addLineItem","onNameChange","onEmailChange","saveData","onDateChange","lineItemChangeListener","ref");
+					this._bind("addLineItem","onNameChange","onEmailChange","saveData","onDateChange","lineItemChangeListener");
 		}
 
 		/**
+		*  @param {array} methods - all method names to bind/evaluate to the current execution context.
+		*  All the methods as an array that should execute in the current context are set through constructor
+		*/
+    _bind(...methods) {
+        methods.forEach(method => this[method] = this[method].bind(this));
+    }
+
+		/**
 		* Below method is used for incrementing the count of line items
-		* and rerenders the DOM.
+		* array
 		*/
 		addLineItem(){
 				this.setState({
@@ -45,6 +53,7 @@ class App extends React.Component {
 						name: event.target.value
 				});
 		}
+
 
 		/**
 		*  @param {event}
@@ -77,24 +86,16 @@ class App extends React.Component {
 									        {
 									          name: this.state.name,
 									          email: this.state.email,
-														data: this.state.date,
+														date: this.state.date,
 														lineItems: this.state.lineItemsArray
 									        }
 									      ]
 									   }
 									};
-				localStorage.setItem('myData', JSON.stringify(postData));
+				localStorage.setItem('storeData', JSON.stringify(postData));
 				notify.show("Invoice successfully saved/sent", "success", 2000,"#0E1717");
 				window.setTimeout(function(){location.reload()},1000)
 		}
-
-		/**
-		*  @param {array} methods - all method names to bind/evaluate to the current execution context.
-		*  All the methods as an array that should execute in the current context are set through constructor
-		*/
-    _bind(...methods) {
-        methods.forEach(method => this[method] = this[method].bind(this));
-    }
 
 		/**
 		*  @param {id, description, amount} - When ever there is a change/update to the
@@ -125,7 +126,7 @@ class App extends React.Component {
 		render() {
 				let lineItemsUI =[];
 				for (var i = 0; i < this.state.lineItems; i +=1) {
-					lineItemsUI.push(<LineItems lineItemChangeListener={this.lineItemChangeListener.bind(this)} id={i}/>);
+					lineItemsUI.push(<LineItems key={i} changeListener= {this.lineItemChangeListener} id={i}/>);
 				}
 				return (
 					<div>
@@ -162,10 +163,13 @@ class App extends React.Component {
 										    Due Date
 										</label>
 									</div>
-									<div className="col-md-3" id="datetimepicker1">
-										<input className="form-control" type="text" value={this.state.date} onChange={this.onDateChange} name="date" />
-									</div>
 
+									<div className="input-group date datepicker" id="datepicker">
+                                        <input className="form-control" type="text" name="date" value={this.state.date} onChange={this.onDateChange} />
+                                        <span className="input-group-addon">
+                                            <span className="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                  </div>
 								</div>
 							<div className="form-group">
 								<div className="row">
@@ -212,4 +216,4 @@ class App extends React.Component {
 			}
 		}
 
-export default App;
+		export default App;
