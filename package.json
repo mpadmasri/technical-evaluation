@@ -13,13 +13,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mpadmasri/technical-evaluation/issues"
-  },
   "homepage": "https://github.com/mpadmasri/technical-evaluation#readme",
   "dependencies": {
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "react-notify-toast": "^0.3.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
