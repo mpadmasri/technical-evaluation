@@ -163,7 +163,7 @@ class App extends React.Component {
 										    Due Date
 										</label>
 									</div>
-									<div className="input-group date datepicker col-md-5" id="datepicker">
+									<div className="input-group date datepicker col-md-4" id="datepicker">
 											<input className="form-control" type="text" name="date" value={window.selectedDate}/>
 														<span className="input-group-addon">
 																	<span className="glyphicon glyphicon-calendar"></span>
