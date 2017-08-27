@@ -86,7 +86,7 @@ class App extends React.Component {
 									        {
 									          name: this.state.name,
 									          email: this.state.email,
-														date: this.state.date,
+														date: window.selectedDate,
 														lineItems: this.state.lineItemsArray
 									        }
 									      ]
@@ -140,36 +140,35 @@ class App extends React.Component {
 							</div>
 							<div>
 								<div className="form-group row">
-									<div className="col-md-2">
+									<div className="col-md-3">
 										<label className="textStyle"> Name </label>
 									</div>
-									<div className="col-md-3">
+									<div className="col-md-4">
 										<input type="name" className="form-control" value={this.state.name} onChange={this.onNameChange} name="name"  />
 									</div>
 								</div>
 								<div className="form-group row">
-									<div className="col-md-2">
+									<div className="col-md-3">
 										<label className="textStyle">
 										    Email
 										</label>
 									</div>
-									<div className="col-md-3">
+									<div className="col-md-4">
 										<input type="email" className="form-control" value={this.state.email} onChange={this.onEmailChange} name="email"  />
 									</div>
 								</div>
 								<div className="form-group row">
-									<div className="col-md-2">
+									<div className="col-md-3">
 										<label className="textStyle">
 										    Due Date
 										</label>
 									</div>
-
-									<div className="input-group date datepicker" id="datepicker">
-                                        <input className="form-control" type="text" name="date" value={this.state.date} onChange={this.onDateChange} />
-                                        <span className="input-group-addon">
-                                            <span className="glyphicon glyphicon-calendar"></span>
-                                        </span>
-                  </div>
+									<div className="input-group date datepicker col-md-5" id="datepicker">
+											<input className="form-control" type="text" name="date" value={window.selectedDate}/>
+														<span className="input-group-addon">
+																	<span className="glyphicon glyphicon-calendar"></span>
+														</span>
+									</div>
 								</div>
 							<div className="form-group">
 								<div className="row">

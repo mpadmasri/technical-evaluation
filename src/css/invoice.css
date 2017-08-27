@@ -12,10 +12,9 @@
         font-weight: bold;
 }
 
-.readLabelsTextStyle{
-        font-size: 19px;
-        color: black;
-        font-weight: bold;
+.datepicker{
+        width: 31%;
+        margin-left: 305px;
 }
 
 .button {

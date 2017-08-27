@@ -12,6 +12,5 @@ describe("LineItems Component", () => {
     it("should render div as root element", () => {
         const wrapper = shallow(<LineItems />);
         expect(wrapper.type()).toEqual("div");
-
-    });
+      });
 });
