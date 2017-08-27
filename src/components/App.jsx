@@ -22,7 +22,7 @@ class App extends React.Component {
 						email: "",
 						date: "",
 					};
-					this._bind("addLineItem","onNameChange","onEmailChange","saveData","onDateChange","lineItemChangeListener");
+					this._bind("addLineItem","onNameChange","onEmailChange","saveData","lineItemChangeListener");
 		}
 
 		/**
@@ -66,16 +66,6 @@ class App extends React.Component {
 		}
 
 		/**
-		*  @param {event}
-		*  Below method is used for handling the date that is provided by the user. The new state for the date is set.
-		*/
-		onDateChange(event){
-				this.setState({
-						date: event.target.value
-				});
-		}
-
-		/**
 		*  Below method is used for saving the data in the browser local storage.
 		*/
 		saveData(){
@@ -87,6 +77,7 @@ class App extends React.Component {
 									          name: this.state.name,
 									          email: this.state.email,
 														date: window.selectedDate,
+														amountTotal: this.state.amountTotal,
 														lineItems: this.state.lineItemsArray
 									        }
 									      ]
@@ -170,7 +161,7 @@ class App extends React.Component {
 										</label>
 									</div>
 									<div className="input-group date col-sm-4" id="datepicker">
-											<input className="form-control" type="text" name="date" value={window.selectedDate}/>
+											<input className="form-control" type="text" name="date" format="DD-MM-YYYY" value={window.selectedDate} />
 														<span className="input-group-addon">
 																	<span className="glyphicon glyphicon-calendar"></span>
 														</span>

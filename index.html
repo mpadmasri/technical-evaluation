@@ -19,11 +19,14 @@
 <script type="text/javascript">
  var selectedDate="";
  $('#datepicker').datepicker({
-    format: 'mm/dd/yyyy',
+    format: 'yyyy-mm-dd',
     autoclose: true
 });
   $('#datepicker').datepicker().on('changeDate', function(event){
-       selectedDate =event.date;
+        var dd = (event.date.getDate() < 10 ? '0' : '') + event.date.getDate();
+        var MM = ((event.date.getMonth() + 1) < 10 ? '0' : '') + (event.date.getMonth() + 1);
+        var yyyy = event.date.getFullYear();
+       selectedDate =yyyy+"-"+MM+"-"+dd;
   });
 </script>
 </html>
