@@ -7,19 +7,13 @@
 
 # Purpose of this repo
 
-    Simple Invoice App that is used to enter the customer details.
+    Simple Invoice App that is used to enter the Invoice details for a customer.
     Allows to add multiple line items and amount for each line item.
-    Clicking on Send will be displaying the data in the console.
-    
+    Clicking on Send will be storing the data to browser local storage.
+
 # Steps to use this repo
 
     git clone https://github.com/mpadmasri/technical-evaluation
-    npm install 
+    npm install
     webpack-dev-derver for compiling and for live reloading of the changes
     navigate to localhost:<port>
-    
-    
-
-
-
-
