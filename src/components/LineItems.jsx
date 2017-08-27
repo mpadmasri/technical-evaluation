@@ -58,11 +58,11 @@ class LineItems extends React.Component {
 				*/
 				render() {
 							return (
-									<div className="form-group row">
-										<div className="col-md-5">
+									<div className="form-group row pullAmountRight">
+										<div className="col-sm-5">
 												 <input className="form-control" type="text" name="desc" onChange={this.onDescChange}/>
 										</div>
-										<div className="col-md-2">
+										<div className="col-sm-2">
 												<input className="form-control" type="text" name="amount" onChange={this.onAmountChange}/>
 										</div>
 									</div>

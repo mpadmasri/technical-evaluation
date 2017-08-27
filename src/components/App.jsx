@@ -140,30 +140,36 @@ class App extends React.Component {
 							</div>
 							<div>
 								<div className="form-group row">
-									<div className="col-md-3">
+									<div className="col-sm-3">
 										<label className="textStyle"> Name </label>
 									</div>
-									<div className="col-md-4">
-										<input type="name" className="form-control" value={this.state.name} onChange={this.onNameChange} name="name"  />
-									</div>
+										<div className="input-group col-sm-4" id="user">
+												<input className="form-control" type="name" name="name" value={this.state.name} onChange={this.onNameChange}/>
+															<span className="input-group-addon">
+																		<span className="glyphicon glyphicon-user"></span>
+															</span>
+										</div>
 								</div>
 								<div className="form-group row">
-									<div className="col-md-3">
+									<div className="col-sm-3">
 										<label className="textStyle">
 										    Email
 										</label>
 									</div>
-									<div className="col-md-4">
-										<input type="email" className="form-control" value={this.state.email} onChange={this.onEmailChange} name="email"  />
-									</div>
+										<div className="input-group col-sm-4" id="envelope">
+												<input className="form-control" type="email" name="email" value={this.state.email} onChange={this.onEmailChange}/>
+															<span className="input-group-addon">
+																		<span className="glyphicon glyphicon-envelope"></span>
+															</span>
+										</div>
 								</div>
 								<div className="form-group row">
-									<div className="col-md-3">
+									<div className="col-sm-3">
 										<label className="textStyle">
 										    Due Date
 										</label>
 									</div>
-									<div className="input-group date datepicker col-md-4" id="datepicker">
+									<div className="input-group date col-sm-4" id="datepicker">
 											<input className="form-control" type="text" name="date" value={window.selectedDate}/>
 														<span className="input-group-addon">
 																	<span className="glyphicon glyphicon-calendar"></span>
@@ -188,10 +194,10 @@ class App extends React.Component {
 										{lineItemsUI}
 								</div>
 								<div className="form-group">
-										<img src="/src/assets/Add.png" width="42" height="42" className="img-rounded" onClick={this.addLineItem} />
+										<img src="/src/assets/Add.png" className="imgSize" onClick={this.addLineItem} />
 								</div>
 								<div className="row">
-									<div className="col-sm-1 col-sm-offset-5">
+									<div className="col-sm-1 col-sm-offset-5 pullRight">
 											<label className="readLabelsTextStyle">
 												TOTAL
 											</label>
@@ -202,7 +208,7 @@ class App extends React.Component {
 								</div>
 							<div>
 								<div className="row col-sm-2 col-sm-offset-5">
-										<button type="button" className="button col-sm-2 col-sm-offset-5" onClick={this.saveData}>SEND</button>
+										<button type="button" className="button col-sm-1 col-sm-offset-5" onClick={this.saveData}>SEND</button>
 								</div>
 										<div>
 												<Notifications />

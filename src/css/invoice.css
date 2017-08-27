@@ -17,9 +17,23 @@
         margin-left: 305px;
 }
 
+.pullRight{
+        margin-right: 40px;
+}
+
+.pullAmountRight{
+        margin-right: -40px;
+}
+
+.imgSize{
+        width: 42px;
+        height: 42px;
+}
+
 .button {
     margin-top: 20px;
-    width: 100px;
+    margin-right: 90px;
+    width: 110px;
     height: 27px;
     text-decoration-color: black;
     border-radius: 5px;
