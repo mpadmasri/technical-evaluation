@@ -183,7 +183,7 @@ class App extends React.Component {
 												  Description
 										</label>
 								 	</div>
-				  				<div className="col-md-2">
+				  				<div className="pullAmountRight col-md-2">
 										<label className="textStyle">
 													Amount
 										</label>

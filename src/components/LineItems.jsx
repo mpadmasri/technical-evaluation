@@ -58,7 +58,7 @@ class LineItems extends React.Component {
 				*/
 				render() {
 							return (
-									<div className="form-group row pullAmountRight">
+									<div className="form-group row pullAmountField">
 										<div className="col-sm-5">
 												 <input className="form-control" type="text" name="desc" onChange={this.onDescChange}/>
 										</div>

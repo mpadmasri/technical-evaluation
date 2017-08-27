@@ -22,7 +22,11 @@
 }
 
 .pullAmountRight{
-        margin-right: -40px;
+        margin-left: 10px;
+}
+
+.pullAmountField{
+        margin-right: -35px;
 }
 
 .imgSize{
