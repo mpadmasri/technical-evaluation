@@ -77,7 +77,7 @@ class App extends React.Component {
 									          name: this.state.name,
 									          email: this.state.email,
 														date: window.selectedDate,
-														amountTotal: this.state.amountTotal,
+														amountTotal: this.state.amountTotal.toFixed(2),
 														lineItems: this.state.lineItemsArray
 									        }
 									      ]
