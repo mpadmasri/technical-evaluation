@@ -8,7 +8,6 @@ class LineItems extends React.Component {
 			/**
 			*  @param {object} props - LineItems props.
 			*  This method initializes and also sets the default state.
-			*  Pass its props to the super class
 			*/
 			constructor(props) {
 					super(props);
