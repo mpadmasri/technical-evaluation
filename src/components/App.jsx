@@ -10,7 +10,6 @@ class App extends React.Component {
 		/**
 		*  @param {object} props - App props.
 		*  This method initializes and also sets the default state.
-		*  Pass its props to the super class
 		*/
 		constructor (props) {
 					super(props);
